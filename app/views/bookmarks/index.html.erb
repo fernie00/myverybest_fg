@@ -21,7 +21,7 @@
         <td><%= bookmark.user.email %></td>
         <td><%= bookmark.dish.dish_name %></td>
         <td><%= bookmark.notes %></td>
-        <td><%= bookmark.venue_id %></td>
+        <td><%= bookmark.venue.venue_name %></td>
         <td>
           <a href="/bookmarks/<%= bookmark.id %>" class="btn btn-primary">Show</a>
           <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">Edit</a>
