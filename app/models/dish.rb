@@ -1,6 +1,9 @@
 class Dish < ApplicationRecord
   # Direct associations
 
+  has_many   :bookmarks,
+             :dependent => :destroy
+
   belongs_to :venue,
              :required => false,
              :counter_cache => true
