@@ -21,7 +21,13 @@
         <td><%= dish.dish_name %></td>
         <td><%= dish.cuisine %></td>
         <td><%= dish.type_dish %></td>
-        <td><%= dish.venue.venue_name %></td>
+        <td>
+          <% if dish.venue.present? %>
+            <a href="/venues/<%= dish.venue.id %>">
+              <%= dish.venue.venue_name %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/dishes/<%= dish.id %>" class="btn btn-primary">Show</a>
           <a href="/dishes/<%= dish.id %>/edit" class="btn btn-warning">Edit</a>
