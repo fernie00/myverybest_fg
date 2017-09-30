@@ -5,6 +5,8 @@ class Dish < ApplicationRecord
 
   # Validations
 
+  validates :dish_name, :uniqueness => true
+
   validates :dish_name, :presence => true
 
 end
