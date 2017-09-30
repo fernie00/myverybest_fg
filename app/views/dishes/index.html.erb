@@ -14,11 +14,6 @@
   </div>
 
 <div class="form-group">
-    <%= f.label :type_dish_cont, "Type dish contains" %>
-    <%= f.text_field :type_dish_cont, :class => "form-control", :placeholder => "Type dish contains" %>
-  </div>
-
-<div class="form-group">
     <%= f.label :cuisine_cont, "Cuisine contains" %>
     <%= f.text_field :cuisine_cont, :class => "form-control", :placeholder => "Cuisine contains" %>
   </div>
@@ -89,7 +84,6 @@
       <tr>
         <th>Dish name</th>
         <th>Cuisine</th>
-        <th>Type dish</th>
         <th>Venue</th>
         <th>Actions</th>
       </tr>
@@ -98,7 +92,6 @@
       <tr>
         <td><%= dish.dish_name %></td>
         <td><%= dish.cuisine %></td>
-        <td><%= dish.type_dish %></td>
         <td>
           <% if dish.venue.present? %>
             <a href="/venues/<%= dish.venue.id %>">
